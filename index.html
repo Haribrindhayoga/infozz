@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>INFOZZ</title>
+    <style>
+      h1 {text-align: center;}
+      p {text-align: center;}
+    </style>     
+    <h1  style="color: white;">THE INFOZZ</h1>
+<!--date & time-->
+<html>
+<body>
+  <div id="container">
+  
+  
+    <script>
+      function display_ct7() {
+        var x = new Date();
+        var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+        var dayOfWeek = days[x.getDay()];
+    
+        var ampm = x.getHours() >= 12 ? ' PM' : ' AM';
+        var hours = x.getHours() % 12;
+        hours = hours ? hours : 12;
+        hours = hours.toString().length == 1 ? '0' + hours.toString() : hours;
+    
+        var minutes = x.getMinutes().toString();
+        minutes = minutes.length == 1 ? '0' + minutes : minutes;
+    
+        var seconds = x.getSeconds().toString();
+        seconds = seconds.length == 1 ? '0' + seconds : seconds;
+    
+        var month = (x.getMonth() + 1).toString();
+        month = month.length == 1 ? '0' + month : month;
+    
+        var dt = x.getDate().toString();
+        dt = dt.length == 1 ? '0' + dt : dt;
+    
+        var x1 = dayOfWeek + ", " + month + "/" + dt + "/" + x.getFullYear();
+        x1 = x1 + " - " + hours + ":" + minutes + ":" + seconds + " " + ampm;
+        document.getElementById('ct7').innerHTML = x1;
+        display_c7();
+      }
+    
+      function display_c7() {
+        var refresh = 1000; // Refresh rate in milliseconds
+        mytime = setTimeout('display_ct7()', refresh);
+      }
+    
+      display_c7();
+    </script>
+    <span id='ct7' style="background-color: white"></span>
+  </div>
+</body>
+</html>
+
+        //fonts:
+        
+    <!--font awesome-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!--Google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!---css style-->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+    
+<!----search tag---->
+
+      <div class="inputSearch desktop">
+        <form id="searchForm">
+          <input type="text" placeholder="Type to search..." id="searchInput" />
+          <span> <i class="fa-solid fa-search"></i></span>
+        </form>
+      </div>
+
+<!---menu bar--->
+
+      <nav class="desktop">
+        <ul>
+          <li>
+            POLITICS
+            <div class="dropdown-content">
+            <a onclick="Search('India')">India</a>
+            <a onclick="Search('world politics')">worldpolitics</a>
+            <a onclick="Search('Asia')">Asia</a>
+            <a onclick="Search('Africa')">Africa</a>
+            <a onclick="Search('America')">America</a>
+            <a onclick="Search('Australia')">Australia</a>
+            <a onclick="Search('Europe')">Europe</a>
+          </li>
+
+          <li>
+            INDIA
+            <div class="dropdown-content">
+              <a onclick="Search('Tamilnadu')">Tamilnadu</a>
+              <a onclick="Search('Andhrapradesh')">Andhrapradesh</a>
+              <a onclick="Search('Chhattisgarh')">Chhattisgarh</a>
+              <a onclick="Search('West Bengal')">West Bengal</a>
+              <a onclick="Search('Kerala')">Kerala</a>
+              <a onclick="Search('Karnataka')">Karnataka</a>
+              <a onclick="Search('Telangana')">Telangana</a>
+              <a onclick="Search('Punjab')">Punjab</a>
+              <a onclick="Search('Haryana')">Haryana</a>
+              <a onclick="Search('Himachal Pradesh')">Himachal pradesh</a> 
+              <a onclick="Search('Bihar')">Bihar</a>
+              <a onclick="Search('Jharkhand')">Jharkhand</a>
+              <a onclick="Search('Uttar pradesh')">Uttar pradesh</a>
+              <a onclick="Search('Madhya pradesh')">Madhya pradesh</a>
+              <a onclick="Search('Maharashtra')">Maharashtra</a>
+              <a onclick="Search('Jammu and Kashmir')">Jammu and Kashmir</a>
+              <a onclick="Search('Northeast India')">Northeast India</a>
+            </li>
+            <li>
+              SPORTS
+              <div class="dropdown-content">
+              <a onclick="Search('Cricket')">Cricket</a>
+              <a onclick="Search('Football')">Football</a>
+              <a onclick="Search('Hockey')">Hockey</a>
+              <a onclick="Search('Tennis')">Tennis</a>
+              <a onclick="Search('Basketball')">Basketball</a>
+              <a onclick="Search('Volleyball')">Volleyball</a>
+              <a onclick="Search('Athletics')">Athletics</a>
+              <a onclick="Search('Badminton')">Badminton</a>
+              <a onclick="Search('other sports')">other sports</a>
+            </li>
+  
+
+            <li>
+              ENTERTAINMENT
+              <div class="dropdown-content">
+                <a onclick="Search('Hollywood')">Hollywood</a>
+                <a onclick="Search('Bollywood')">Bollywood</a>
+                <a onclick="Search('Tamil')">Tamil</a>
+                <a onclick="Search('Telugu')">Telugu</a>
+                <a onclick="Search('Malayalam')">Malayalam</a>
+                <a onclick="Search('kannada')">kannada</a>
+                <a onclick="Search('Punjabi')">Punjabi</a>
+                <a onclick="Search('Bengali')">Bengali</a>
+                <a onclick="Search('Marathi')">Marathi</a>
+              </li>
+            
+          
+          <li>
+            TECH
+            <div class="dropdown-content">
+            <a onclick="Search('India')">India</a>
+            <a onclick="Search('Asia')">Asia</a>
+            <a onclick="Search('Africa')">Africa</a>
+            <a onclick="Search('America')">America</a>
+            <a onclick="Search('Australia')">Australia</a>
+            <a onclick="Search('Europe')">Europe</a>
+          </li>
+
+          <li>
+            ECONOMY
+            <div class="dropdown-content">
+              <a onclick="Search('Business')">Business</a>
+            <a onclick="Search('India')">India</a>
+            <a onclick="Search('world')">world</a>
+          <li onclick="Search('HEALTH')">HEALTH</li>
+            
+          
+            
+        </ul>
+      </nav>
+
+      <div class="menuBtn">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+
+      <!------>
+      <div class="mobile hidden">
+        <nav>
+          <ul>
+            <li>
+              POLITICS
+              <div class="dropdown-content">
+              <a onclick="Search('India')">India</a>
+              <a onclick="Search('world')">world</a>
+              <a onclick="Search('Asia')">Asia</a>
+              <a onclick="Search('Africa')">Africa</a>
+              <a onclick="Search('America')">America</a>
+              <a onclick="Search('Australia')">Australia</a>
+              <a onclick="Search('Europe')">Europe</a>
+            </li>
+  
+            <li>
+              INDIA
+              <div class="dropdown-content">
+                <a onclick="Search('Tamilnadu')">Tamilnadu</a>
+                <a onclick="Search('Andhrapradesh')">Andhrapradesh</a>
+                <a onclick="Search('Chhattisgarh')">Chhattisgarh</a>
+                <a onclick="Search('West Bengal')">West Bengal</a>
+                <a onclick="Search('Kerala')">Kerala</a>
+                <a onclick="Search('Karnataka')">Karnataka</a>
+                <a onclick="Search('Telangana')">Telangana</a>
+                <a onclick="Search('Punjab')">Punjab</a>
+                <a onclick="Search('Haryana')">Haryana</a>
+                <a onclick="Search('Himachal Pradesh')">Himachal pradesh</a> 
+                <a onclick="Search('Bihar')">Bihar</a>
+                <a onclick="Search('Jharkhand')">Jharkhand</a>
+                <a onclick="Search('Uttar pradesh')">Uttar pradesh</a>
+                <a onclick="Search('Madhya pradesh')">Madhya pradesh</a>
+                <a onclick="Search('Maharashtra')">Maharashtra</a>
+                <a onclick="Search('Jammu and Kashmir')">Jammu and Kashmir</a>
+                <a onclick="Search('Northeast India')">Northeast India</a>
+              </li>
+              <li>
+                SPORTS
+                <div class="dropdown-content">
+                <a onclick="Search('Cricket')">Cricket</a>
+                <a onclick="Search('Football')">Football</a>
+                <a onclick="Search('Hockey')">Hockey</a>
+                <a onclick="Search('Tennis')">Tennis</a>
+                <a onclick="Search('Basketball')">Basketball</a>
+                <a onclick="Search('Volleyball')">Volleyball</a>
+                <a onclick="Search('Athletics')">Athletics</a>
+                <a onclick="Search('Badminton')">Badminton</a>
+                <a onclick="Search('other sports')">other sports</a>
+              </li>
+    
+  
+              <li>
+                ENTERTAINMENT
+                <div class="dropdown-content">
+                  <a onclick="Search('Hollywood')">Hollywood</a>
+                  <a onclick="Search('Bollywood')">Bollywood</a>
+                  <a onclick="Search('Tamil')">Tamil</a>
+                  <a onclick="Search('Telugu')">Telugu</a>
+                  <a onclick="Search('Malayalam')">Malayalam</a>
+                  <a onclick="Search('kannada')">kannada</a>
+                  <a onclick="Search('Punjabi')">Punjabi</a>
+                  <a onclick="Search('Bengali')">Bengali</a>
+                  <a onclick="Search('Marathi')">Marathi</a>
+                </li>
+              
+            
+            <li>
+              TECH
+              <div class="dropdown-content">
+              <a onclick="Search('India')">India</a>
+              <a onclick="Search('Asia')">Asia</a>
+              <a onclick="Search('Africa')">Africa</a>
+              <a onclick="Search('America')">America</a>
+              <a onclick="Search('Australia')">Australia</a>
+              <a onclick="Search('Europe')">Europe</a>
+            </li>
+  
+            <li>
+              ECONOMICS
+              <div class="dropdown-content">
+              <a onclick="Search('India')">India</a>
+              <a onclick="Search('world')">world</a>
+            <li onclick="Search('HEALTH')">HEALTH</li>
+            
+                     </ul>
+        </nav>
+        <div class="inputSearch">
+        <form id="searchFormMobile" id="searchInputMobile">
+          <input type="text" placeholder="Type to search..." />
+          <span> <i class="fa-solid fa-search"></i></span>
+        </div>
+        </form>
+      </div>
+    </header>
+
+//js:
+
+    <!-- main  -->
+
+    <main></main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

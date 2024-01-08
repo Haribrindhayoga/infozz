@@ -1,2 +1,2 @@
 # infozz
-an exclusive news app website
+An exclusive news app website.The application will display the latest news headlines with thumbnails and trail text. Upon a click, a user is able to access a full story and then return to headlines.A feature of the app is that navigation from headlines to stories and back again is lightning fast: data is loaded by the initial fetch request when the app is loaded. After this, only images and videos for full stories clicked on by the user must be loaded.
